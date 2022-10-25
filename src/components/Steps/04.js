@@ -1,18 +1,8 @@
 import React from "react";
 import { CheckIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Center,
-  Heading,
-  Text,
-  Button,
-  Circle,
-  useDisclosure,
-} from "@chakra-ui/react";
-import ModalLayout from "../../layouts/modal";
+import { Box, Center, Heading, Text, Button, Circle } from "@chakra-ui/react";
 
 const Step04 = () => {
-  const modal = useDisclosure();
   return (
     <Box>
       <Center>
@@ -29,22 +19,9 @@ const Step04 = () => {
         </Text>
       </Box>
       <Box px={{ base: 8, lg: 16 }} mt={6}>
-        <Button
-          colorScheme="brand"
-          w={"full"}
-          onClick={() => {
-            modal.onOpen();
-          }}
-        >
+        <Button colorScheme="brand" w={"full"}>
           Create Workspace
         </Button>
-      </Box>
-      <Box>
-        <ModalLayout
-          isOpen={modal.isOpen}
-          onClose={modal.onClose}
-          text="You have completed your onboarding"
-        />
       </Box>
     </Box>
   );
